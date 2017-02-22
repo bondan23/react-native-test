@@ -19,6 +19,9 @@ import Border from '../utility/Border';
 import Label from '../utility/Label';
 
 
+var Fabric = require('react-native-fabric');
+var { Crashlytics,Answers } = Fabric;
+
 const location = require('../../img/location.png');
 const suitcase = require('../../img/suitcase.png');
 const userpicture = require('../../img/user.png');
@@ -32,10 +35,8 @@ class FirstPage extends Component {
   }
   
   _reviewedPress(){
-    AlertIOS.alert(
-       'Review Complete',
-       'All your data are belong to us.'
-    );
+    Answers.logContentView('Answers setup process super easy!', 'Technical documentation', 'article-23', { 'user-id': 23 });
+    Answers.logCustom('Review Candidate', { 'userId': 23,'name':'foo','company':'bar' });
   }
 
   render() {

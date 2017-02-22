@@ -9,6 +9,7 @@
   "dependencies": {
     "react": "15.4.2",
     "react-native": "0.41.2",
+    "react-native-fabric": "^0.4.1",
     "react-native-navbar": "^1.6.0"
   },
   "devDependencies": {
@@ -20,8 +21,8 @@
   "jest": {
     "preset": "react-native"
   },
-  "rnpm":{
-    "assets":[
+  "rnpm": {
+    "assets": [
       "fonts"
     ]
   }

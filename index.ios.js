@@ -22,10 +22,15 @@ const windowHeight = Dimensions.get('window').height;
 
 export default class qolega2 extends Component {
 
+  
   renderScene = (route, navigator) => {
     return React.createElement(route.component, {navigator: navigator});
   }
-
+  
+  componentDidMount(){
+    
+  }
+  
   render() {
     return (
       <View style={styles.container}>
