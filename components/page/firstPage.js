@@ -22,6 +22,8 @@ import Label from '../utility/Label';
 var Fabric = require('react-native-fabric');
 var { Crashlytics,Answers } = Fabric;
 
+var axios = require('axios')
+
 const location = require('../../img/location.png');
 const suitcase = require('../../img/suitcase.png');
 const userpicture = require('../../img/user.png');
@@ -35,8 +37,19 @@ class FirstPage extends Component {
   }
   
   _reviewedPress(){
-    Answers.logContentView('Answers setup process super easy!', 'Technical documentation', 'article-23', { 'user-id': 23 });
-    Answers.logCustom('Review Candidate', { 'userId': 23,'name':'foo','company':'bar' });
+    /*var link = 'http://qerja.com/api-qolega/';
+    axios.get(link+'/industries')
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });*/
+    
+    AlertIOS.alert(
+       'Review Complete',
+       'All your data are belong to us.'
+    );
   }
 
   render() {
