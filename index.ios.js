@@ -30,7 +30,7 @@ export default class qolega2 extends Component {
     return (
       <View style={styles.container}>
         <Navigator
-          initialRoute={FirstPage.route()}
+          initialRoute={LoginPage.route()}
           renderScene={this.renderScene}
           style={styles.navigator} />
       </View>

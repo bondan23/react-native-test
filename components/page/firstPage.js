@@ -7,6 +7,7 @@ import {
   Image,
   View,
   ScrollView,
+  AlertIOS,
 } from 'react-native'
 
 import NavBar from 'react-native-navbar';
@@ -28,6 +29,13 @@ class FirstPage extends Component {
       id: 'FirstPage',
       component: FirstPage
     };
+  }
+  
+  _reviewedPress(){
+    AlertIOS.alert(
+       'Review Complete',
+       'All your data are belong to us.'
+    );
   }
 
   render() {
@@ -169,7 +177,7 @@ class FirstPage extends Component {
               />
               
               <TouchableHighlight
-                onPress={() => {}}
+                onPress={() => this._reviewedPress()}
                 activeOpacity={ 75  / 100}
                 style={styles.button}
                 underlayColor={ "rgba(101,209,248,1)" }
@@ -216,7 +224,7 @@ class FirstPage extends Component {
               />
               
               <TouchableHighlight
-                onPress={() => {}}
+                onPress={() => this._reviewedPress()}
                 activeOpacity={75 / 100}
                 style={styles.button}
                 underlayColor={"rgba(101,209,248,1)"}
@@ -331,7 +339,7 @@ class FirstPage extends Component {
               />
               
               <TouchableHighlight
-                onPress={() => {}}
+                onPress={() => this._reviewedPress()}
                 activeOpacity={ 75  / 100}
                 style={styles.button}
                 underlayColor={ "rgba(101,209,248,1)" }
